@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <h1>array sorting</h1>
+    <p>click the buttons to arrange in ascending and descending order</p>
+    <button onclick="ascending()">ascending order</button>
+    <button onclick="descending()">descending order</button>
+    <p id="result"></p>
+
+    <h1>mapping</h1>
+    <p id="product_result"></p>
+
+    <h1>evaluate function</h1>
+    <p id="eval_function"></p>
+    <button onclick="eval1()">evaluate function</button>
+    
+<script>
+
+    //sort and reverse
+    var numbers=[23,67,89,12,54,90];
+    document.getElementById("result").innerHTML=numbers;
+    function ascending(){
+        numbers.sort(function(a,b){return a-b});
+        document.getElementById("result").innerHTML=numbers;
+    }
+    function descending(){
+        numbers.sort(function(a,b){return b-a});
+        document.getElementById("result").innerHTML=numbers;
+    }
+
+    //mapping
+    var products=[45,7,34,21,10];
+
+    function myFunction(n){
+        return n * 40;
+    }
+    var new_products=products.map(myFunction);
+    document.getElementById("product_result").innerHTML=new_products;
+
+    //eval function
+    function eval1(){
+        x=45;
+        y=20;
+        var a=eval("x+y")+"<br>";
+        var b=eval("5*8")+"<br>";
+        var c=eval("34-14")+"<br>";
+        var d=eval("y*x")+"<br>";
+
+        document.write(a)+"<br>";
+        document.write(b)+"<br>";
+        document.write(c)+"<br>";
+        document.write(d)+"<br>";
+    }
+    document.write(a+b+c);
+</script>    
+</body>    
+</html>
